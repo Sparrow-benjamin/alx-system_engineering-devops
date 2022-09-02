@@ -1,5 +1,7 @@
-a script that sets the mode of the file hello to this:
+ a script that sets the mode of the file hello the same as olleh’s mode.
 
 
 
--rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
+The file hello will be in the working directory
+
+The file olleh will be in the working directory
