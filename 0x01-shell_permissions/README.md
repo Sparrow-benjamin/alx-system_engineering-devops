@@ -1,1 +1,1 @@
-a script that prints all the groups the current user 
+a script that changes the owner of the file
