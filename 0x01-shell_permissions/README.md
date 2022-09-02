@@ -1,1 +1,1 @@
-a script that changes the owner of the file
+a script that creates an empty file
