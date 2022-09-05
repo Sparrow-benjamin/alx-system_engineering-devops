@@ -1,1 +1,1 @@
- a script that displays all users and their home directories
+a script that displays the third line of the file iacta.
