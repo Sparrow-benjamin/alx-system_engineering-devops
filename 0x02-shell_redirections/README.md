@@ -1,1 +1,1 @@
- a script that deletes all the regular files (not the directories) with a .js extension
+a shell script that creates a file named exactly containing the text Best School ending by a new line.
