@@ -1,1 +1,1 @@
-a script that displays a confused smiley
+a command that finds all empty files and directories in the current directory
