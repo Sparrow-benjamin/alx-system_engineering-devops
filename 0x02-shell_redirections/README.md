@@ -1,1 +1,1 @@
-a script that displays the third line of the file iacta.
+a script that writes into the file ls_cwd_content the result of the command ls -la.
