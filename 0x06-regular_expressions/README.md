@@ -1,1 +1,1 @@
-0x06. Regular expression
+regular expression in ruby
