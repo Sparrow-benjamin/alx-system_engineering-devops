@@ -1,0 +1,32 @@
+0-SIMPLE-WEB-STACK
+
+
+
+The user will input the url (www.foobar.com) into their browser search bar. The browser will search in its cache to peer if it has the IP address to the url,
+if it doesn't the OS will test in its cache if it has the IP cope with. If the OS would not have it, the resolver will query the root server, the basis server will
+offer the IP to the TLD server. The resolver will shop this IP address in its cache, it will then question the TLD server for the IP deal with to the Authoritative
+call Server, the resolver will store this IP deal with its cache. The authoritative call server will eventually supply the resolver the IP cope with to www.foobar.com, the resolver
+will shop the IP cope with and supply it lower back to the browser, all inside milliseconds, this will enable the browser to access www.foobar.com
+
+A server is a pc that responds to the HTTP requests of customer pc.
+The area name is converted into an IP deal which permits the consumer computer to locate the server and therefore question the server.
+The www in www.foobar.com is an A document.
+The web server serves content material in the form of static web pages or images or different files to the purchaser.
+The application server permits server aspect scripting which permits the alteration of static internet pages primarily based on statistics from the database,
+the software server also can be used to modify the code base or the database.
+The database holds applicable statistics that can be used in the scripting of internet pages.
+The server makes use of the OSI version and TCP/IP to speak with the laptop of the user soliciting for the internet site.
+
+There are more than one single points of failure inside the infrastructure:
+- the connection of the user to the internet
+- the connection of the server to the net
+- the failing of the internet server
+
+In view that there may be the most effective server, downtime is inevitable within the case whilst updates need to be made to the server.
+The update times might have to be scheduled to the hours while there are not many users trying to get right of entry to www.foobar.com/
+
+there is an opportunity that the server might also face congestion because of excessive amounts of site visitors. it might therefore be not able to scale up
+which will deal with the accelerated quantity of requests because of it being the best server available.
+
+
+https://docs.google.com/document/d/1UlD5R1aShZQil8NuMXXdHzlpMqRSkRx6nD111VAIr4g/edit?usp=sharing
