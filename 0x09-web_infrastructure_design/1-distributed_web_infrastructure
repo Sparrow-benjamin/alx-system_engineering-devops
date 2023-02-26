@@ -1,0 +1,23 @@
+1-distributed_web_infrastructure
+
+
+
+The extra server will enable us to have redundancy in addition to lessen congestion due to the addition of a load balancer.
+This may enhance the overall performance of the website.
+The load balancer will use the round robin distribution set of rules. This set of rules works by assigning requests to the servers
+relying on the wide variety of the request, oddly variety requests visit server 1 and lightly numbered requests go to server 2.
+The load balancer enables an lively-lively setup, this is to lessen the congestion and lessen the burden of the first server.
+In an energetic-energetic setup both servers will work at the equal time while in a passive-passive installation one of the servers will be on standby
+for redundancy.
+The primary-reproduction cluster commonly gets up to date every time the master database gets updated. information from the master gets replicated to the slave.
+The duplicate node is based on data from the primary node. That is due to the fact replication is occasion-driven.
+The SPOF are:
+- the connection of the client to the net
+- the connection of the internet servers to the net
+- malfunction in the load balancer
+The server installation has no firewalls and does not use HTTPS making it at risk of assaults.
+there's also no tracking so it would be hard to are expecting peak hours, to discover while congestion occurs and why the congestion happens as nicely
+as permit quicker healing from congestion.
+
+
+https://docs.google.com/document/d/1jFbUzrTkDCyN4fxSkjEtcErNrRFpuZH1dhpCXk8wSEk/edit?usp=sharing
