@@ -1,32 +1,31 @@
-0-SIMPLE-WEB-STACK
+0-simple_web_stack
 
 
+The User will enter the url (www.foobar.com) into their browser seek bar. The browser will search in its cache to peer if it has the IP deal with to the url,
+if it does not the OS will take a look at its cache if it has the IP deal with. If the OS doesn't have it, the resolver will question the basis server, the basis server will
+offer the IP to cope with  the TLD server. The resolver will save this IP address in its cache, it'll then query the TLD server for the IP cope with to the Authoritative
+name Server, the resolver will store this IP deal with its cache. The authoritative call server will in the end provide the resolver the IP address to www.foobar.com, the resolver
+will save the IP deal with and supply it back to the browser, all inside milliseconds, this will permit the browser to get admission to www.foobar.com
 
-The user will input the url (www.foobar.com) into their browser search bar. The browser will search in its cache to peer if it has the IP address to the url,
-if it doesn't the OS will test in its cache if it has the IP cope with. If the OS would not have it, the resolver will query the root server, the basis server will
-offer the IP to the TLD server. The resolver will shop this IP address in its cache, it will then question the TLD server for the IP deal with to the Authoritative
-call Server, the resolver will store this IP deal with its cache. The authoritative call server will eventually supply the resolver the IP cope with to www.foobar.com, the resolver
-will shop the IP cope with and supply it lower back to the browser, all inside milliseconds, this will enable the browser to access www.foobar.com
+A server is a pc that responds to the HTTP requests of a customer laptop.
+The domain call is converted into an IP deal with which lets in the purchaser pc to locate the server and therefore question the server.
+The www in www.foobar.com is an A file.
+The web server serves content in the form of static net pages or snap shots or different files to the purchaser.
+The application server lets in server facet scripting which allows the alteration of static internet pages based totally on facts from the database,
+The utility server can also be used to modify the code base or the database.
+The database holds relevant statistics that can be used inside the scripting of web pages.
+The server uses the OSI version and TCP/IP to speak with the laptop of the consumer soliciting for the website.
 
-A server is a pc that responds to the HTTP requests of customer pc.
-The area name is converted into an IP deal which permits the consumer computer to locate the server and therefore question the server.
-The www in www.foobar.com is an A document.
-The web server serves content material in the form of static web pages or images or different files to the purchaser.
-The application server permits server aspect scripting which permits the alteration of static internet pages primarily based on statistics from the database,
-the software server also can be used to modify the code base or the database.
-The database holds applicable statistics that can be used in the scripting of internet pages.
-The server makes use of the OSI version and TCP/IP to speak with the laptop of the user soliciting for the internet site.
+There are more than one unmarried factors of failure inside the infrastructure:
+  - the relationship of the consumer to the net
+  - the connection of the server to the net
+  - the failing of the internet server
+  
+On the grounds that there's the handiest one server, downtime is inevitable in the case when updates need to be made to the server.
+The replace times would have to be scheduled to the hours whilst there are not many users looking to get entry to www.foobar.com/
 
-There are more than one single points of failure inside the infrastructure:
-- the connection of the user to the internet
-- the connection of the server to the net
-- the failing of the internet server
-
-In view that there may be the most effective server, downtime is inevitable within the case whilst updates need to be made to the server.
-The update times might have to be scheduled to the hours while there are not many users trying to get right of entry to www.foobar.com/
-
-there is an opportunity that the server might also face congestion because of excessive amounts of site visitors. it might therefore be not able to scale up
-which will deal with the accelerated quantity of requests because of it being the best server available.
+there is an opportunity that the server might also face congestion because of excessive amounts of visitors. it might therefore be not able to scale up
+for you to address the accelerated quantity of requests because of it being the handiest server available.
 
 
-https://docs.google.com/document/d/1UlD5R1aShZQil8NuMXXdHzlpMqRSkRx6nD111VAIr4g/edit?usp=sharing
+https://docs.google.com/document/d/1HBfkhlPRPa-Qbw4YyUT0cXkb1TW5UJ9ZA0ctj9VE0ek/edit?usp=sharing
