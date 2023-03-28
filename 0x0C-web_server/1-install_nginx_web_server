@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# installs nginx on webserver
-# changes default webpage to print "Holberton School"
-apt-get -y update
-apt-get install -y nginx
+#install nginx
+apt update
+apt-get -y install nginx
+service nginx start 
 ufw allow 'Nginx HTTP'
-echo 'Holberton School' > /var/www/html/index.nginx-debian.html
-service nginx start
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html
+service nginx restart
