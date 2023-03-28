@@ -1,31 +1,14 @@
 #!/usr/bin/env bash
-#install ngix and have a file that returns the string "Hello World inside
+# Configures Nginx server so that /redirect_me redirects to another page.
+# The redirection is configured to be "301 Moved Permanently"
 
-sudo apt-get update
-sudo apt-get install nginx -y
-echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html
+apt-get update
+apt-get -y install nginx
 
-new_config=\
-"server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-               root /var/www/html;
-        index index.html index.htm index.nginx-debian.html;
-        server_name _;
-        location / {
-                try_files \$uri \$uri/ =404;
-        }
-        
-        if (\$request_filename ~ redirect_me){
-            rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
-        }
-}
-"
+ufw allow 'Nginx HTTP'
 
-echo "$new_config" > /etc/nginx/sites-available/default
-if [ "$(pgrep nginx)" -le 0 ];
-then
-    service nginx start
-else
-    service nginx restart
-fi;
+echo "Hello World!" > /var/www/html/index.html
+
+sed -i '37i\rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+
+service nginx restart
