@@ -1,23 +1,21 @@
 #!/usr/bin/env bash
-# Dsplays info about domain and subdomain.
+# After configuring domain zone, use this script to output where each subdomain points to
+domainInfo () {
 
-records ()
-{
-record="$(dig ${2}.${1} | awk 'NR==14 { print $4 }')"
-
-IP="$(dig ${2}.${1} | awk 'NR==14 { print $5 }')"
-
-echo "The subdomain $2 is a $record record and points to $IP"
+    dig "$1.$2" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v s="$1" 'BEGIN { FS = " " } ;
+	 { print "The subdomain " s " is a " $4 " record and points to " $5 }'
 }
 
+sub_domains=( "www" "lb-01" "web-01" "web-02" )
 
-# Check number of arguments passed to script
-if [ "$#" -ne 2 ];
-then
-    records $1 "www"
-    records $1 "lb-01"
-    records $1 "web-01"
-    records $1 "web-02"
-else
-    records $1 $2
+if [ $# -eq 1 ]; then
+    url="$1"
+    for s in "${sub_domains[@]}"
+    do
+	domainInfo "$s" "$url"
+    done
+elif [ $# -eq 2 ]; then
+    url="$1"
+    sub="$2"
+    domainInfo "$sub" "$url"
 fi
