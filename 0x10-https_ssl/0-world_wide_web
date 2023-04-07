@@ -1,34 +1,23 @@
 #!/usr/bin/env bash
-# Output : The subdomain [SUBDOMAIN] is a [RECORD_TYPE] and points to [DESTINATION]
-# When only the parameter domain is passed, information for all subdomains is printed out.
-# When both a domain and subdomain are passed, information for the specified domain is printed.
-# Usage: ./0-world_wide_web [DOMAIN] [optional SUBDOMAIN]
+# Dsplays info about domain and subdomain.
 
-function domainInfo() {
-    SUBDOMAINS=("www" "lb-01" "web-01" "web-02")
-    if [ $# -eq 1 ]
-    then
-        for subdomain in "${SUBDOMAINS[@]}"; do
-            RECORDTYPE="$(dig $subdomain.$1 | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ' | awk '{print $1}')"
-            DESTINATION="$(dig +short $subdomain.$1)"
-            echo "The subdomain $subdomain is a $RECORDTYPE record and points to $DESTINATION"
-        done
-    elif [ $# -eq 2 ]
-    then
-        RECORDTYPE="$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ' | awk '{print $1}')"
-        DESTINATION="$(dig +short $2.$1)"
-        echo "The subdomain $2 is a $RECORDTYPE record and points to $DESTINATION"
-    else
-        echo "Usage: ./0-world_wide_web [DOMAIN] [optional SUBDOMAIN]"
-    fi
+records ()
+{
+record="$(dig ${2}.${1} | awk 'NR==14 { print $4 }')"
+
+IP="$(dig ${2}.${1} | awk 'NR==14 { print $5 }')"
+
+echo "The subdomain $2 is a $record record and points to $IP"
 }
 
-if [ $# -eq 1 ]
+
+# Check number of arguments passed to script
+if [ "$#" -ne 2 ];
 then
-    domainInfo $1
-elif [ $# -eq 2 ]
-then
-    domainInfo $1 $2
+    records $1 "www"
+    records $1 "lb-01"
+    records $1 "web-01"
+    records $1 "web-02"
 else
-    domainInfo
+    records $1 $2
 fi
