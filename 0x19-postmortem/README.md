@@ -1,4 +1,4 @@
-Question summary:
+Issue summary:
 
 
 On May 4, 2023, from 10:00 a.m.:
